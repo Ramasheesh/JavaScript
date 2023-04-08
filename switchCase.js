@@ -1,25 +1,42 @@
-let day;
-switch(new Date().getDay()){
+let x = 300
+let y = 10
 
-    case(0):
-    day="Monday";
+div= x/y
+mod = x%y
+mul = x*y
+add = x +y
+sub = x - y
+
+let result  = [div,mod,mul,sub,add]
+switch(result){
+
+    case (0):
+    //    console.log((x+y))
+    result[0]
     break;
     case(1):
-    day="Tuesday"
+    //   console.log((x*y))
+    result[1]
     break;
     case(2):
-    day="Wed";
+    //    console.log((x/y))
+    result[2]
     break;
     case(3):
-    day="The";
+    //   console.log(x%y)
+    result[3]
     break;
     case(4):
-    day="Fri";
+    //   console.log(x-y)
+    result[4]
     break;
     case(5):
-    day="Sat"
-    break;
     default:
-        day="sun";
+        console.log("invalid oprations");
 }
-console.log(day)
+console.log(result)
+console.log(result[3])
+console.log(result[4])
+console.log(result[0])
+
+

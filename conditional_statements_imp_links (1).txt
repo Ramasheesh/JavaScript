@@ -1,4 +1,20 @@
 ***** Material and Assignments Link *****
+Assignment
+Write a program to to find prime numbers in between 1 and 20.
+Write a program to print table of 2.
+Write a program to print all odd number between 1 to 50.
+Write a program to find sum of first 10 natural numbers.
+Write a program to find sum of first 10 odd numbers.
+Write a program to calculate factorial of a given number.
+Write a program to display square of first 10 numbers.
+Write a program to find perfect numbers between 1 to 15.
+Write a program to find armstrong numbers from 1 to 500.
+Write a program to display following output :       
+                *
+                **
+                ***
+                ****
+                *****
 
 https://www.dezlearn.com/course-material-and-assignments/javascript-nodejs/conditional-statements-in-javascript/
 

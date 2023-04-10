@@ -1,0 +1,461 @@
+***** Material and Assignments Link *****
+
+https://www.dezlearn.com/course-material-and-assignments/javascript-nodejs/string-operations-in-javascript/
+
+String Operations in JavaScript
+These operations include various methods available in JavaScript (Node.js) for comparing, searching and extracting details of strings. 
+
+String Compare
+Two strings can be compared with the help of strict equality operator that returns Boolean result.
+
+//Cheking if 2 strings are equal
+
+//Example 1:
+
+let str1 = "I Love Node JS"
+let str2 = "I Love Node JS"
+
+console.log("Are str1 and str2 equal?: ", str1 === str2)
+
+/*
+Output:
+Are str1 and str2 equal?:  true
+*/
+
+/*
+Note:
+Using strict equality operator (===) is recommened.
+Because it checks for both values and data types of operands.
+*/
+
+//Example 2:
+
+let str3 = "I Love Node JS"
+let str4 = "I love node js"
+
+console.log("Are str3 and str4 equal?: ", str3 === str4)
+
+/*
+Output:
+Are str3 and str4 equal?:  false
+*/
+
+/*
+Note:
+'===' is case sensetive.
+To ignore the case while comparing 2 strings
+we should first convert both of the string
+to same case (upper / lower).
+*/
+Converting a String to Upper or Lower Case
+The toUpperCase() method converts a string to uppercase letters and toLowerCase() method converts a string to lowercase letters.
+
+//Convert a string to UPPER case
+
+let str1 = "Learning should be easy and fun"
+
+console.log(str1.toUpperCase())
+
+/*
+Output:
+LEARNING SHOULD BE EASY AND FUN
+*/
+
+//Convert a string to lower (snake) case
+
+let str2 = "Node JS is super interesting"
+
+console.log(str2.toLowerCase())
+
+/*
+Output:
+node js is super interesting
+*/
+Trim Unwanted Spaces at Beginning and End of String
+The trim() method removes whitespace from both sides of a string while trimLeft() method removes whitespaces at the start of a string.
+
+The trimRight() or trimEnd() method removes whitespaces at the end of a string.
+
+let str1 = "   I love to aquire new skills    "
+
+//Remove spaces both at the beginnig and end
+console.log("str1 with Trim: ", str1.trim())
+
+//Remove spaces at the beginnig (left)
+console.log("str1 with Trim Left: ", str1.trimLeft())
+
+//Remove spaces at the end (right)
+console.log("str1 with Trim Right: ", str1.trimRight())
+console.log("str1 with Trim End: ", str1.trimEnd())
+String Concatenation
+Two or more strings can be joined using ‘+’ symbol and ‘concat’ method.
+
+let str1 = "Friday"
+let str2 = "Saturday"
+let str3 = "Sunday"
+
+//Concatenation using '+' symbol
+console.log(str1+" "+str2+" "+str3)
+
+/*
+Output:
+Friday Saturday Sunday
+*/
+
+//Concatenation using 'concat' method
+console.log(str1.concat(str2,str3))
+
+/*
+Output:
+FridaySaturdaySunday
+*/
+String Length and Index of its Characters
+Length of a string can be retrieved using ‘length’ property. indexOf() method is used to get an index of specific character in a string.
+
+let str1 = "ABCDE"
+
+//Finding index of a particular character in string
+
+console.log("Index of A: ",str1.indexOf('A'))
+console.log("Index of B: ",str1.indexOf('B'))
+console.log("Index of E: ",str1.indexOf('E'))
+
+/*
+Output:
+Index of A:  0
+Index of B:  1
+Index of E:  4
+*/
+
+//What if the character is not present in the string?
+
+console.log("Index of Z: ",str1.indexOf('Z'))
+
+/*
+Output:
+Index of Z:  -1
+*/
+
+//Finding length of a string
+
+console.log("Length of str1: ", str1.length)
+
+/*
+Output:
+Length of str1:  5
+*/
+
+/*
+Note:
+ 1. Index of first character of a string is '0'
+ 2. Length of a string is nothing but the total number of characters in a string
+ 3. Index of last character of a string is 'length - 1'
+ 4. If a perticular character is not present in the string
+    then the indexOf method returns '-1'
+*/
+Searching in String ('includes' Keyword)
+The includes() method returns true if a string contains a specified string, otherwise it returns false.
+
+let str1 = "This process is completed successfully."
+
+/*
+Searching for a word (sub-string) inside a string
+Returns true/false
+Case sensitive
+*/
+console.log(str1.includes('completed'))
+
+/*
+Output:
+true
+*/
+Searching at the Beginning of a String ('startsWith' Keyword)
+The startsWith() method returns true if a string begins with a specified string, otherwise it returns false.
+
+let str1 = "Done. You are all set."
+
+/*
+Searching for a word (sub-string) at the starting of a string
+Returns true/false
+Case sensitive
+*/
+console.log(str1.startsWith('Done'))
+
+/*
+Output:
+true
+*/
+Searching at the End of a String ('endsWith' Keyword)
+The endsWith() method returns true if a string ends with a specified string, otherwise it returns false.
+
+let str1 = "Wait until session in progress"
+
+/*
+Searching for a word (sub-string) at the end of a string
+Returns true/false
+Case sensitive
+*/
+console.log(str1.endsWith('in progress'))
+
+/*
+Output:
+true
+*/
+Searching from a Specific Position (Index) in String
+The startsWith() method returns true if a string begins with a specified string, otherwise it returns false.
+
+The includes() method returns true if a string contains a specified string, otherwise it returns false.
+
+/*
+'includes'and 'startsWith' methods start searching from index '0' by default.
+However, we can change the starting position by adding a second parameter to above method arguments.
+*/
+
+let str1 = "Wait until session in progress"
+
+console.log(str1.includes('session',15))
+console.log(str1.startsWith('Wait',5))
+
+/*
+Output:
+false
+false
+*/
+
+/*
+Note:
+Word 'Wait' appears at index '0' and the word 'session' appears at index '11' in the string.
+In line 8, we begin the search from index 15, hence no occurance of the word 'session' is found
+In line 9, we begin the search from index 5, so starting word of the string becomes 'until'
+*/
+Searching Index of a Word in String
+The indexOf() method returns the position of the first occurrence of a specified value in a string and returns -1 if the value is not found.
+
+let str1 = "Ability to Focus is an important quality of human mind"
+
+//Finding index of the first character of a particular word in string
+
+console.log("Index of the word 'Focus': ",str1.indexOf("Focus"))
+
+/*
+Output:
+Index of the word 'Focus':  11
+*/
+
+//What if the word is not present in the string?
+
+console.log("Index of the word 'Concentration': ",str1.indexOf("Concentration"))
+
+/*
+Output:
+Index of the word 'Concentration':  -1
+*/
+
+//What if the word is present multiple times in the string?
+
+let str2 = "The most important thing in life is keep the most important thing the most important"
+
+//indexOf always returns the index of first occurance of the word
+
+console.log("Index of first occurance of word 'important': ",str2.indexOf("important"))
+
+/*
+Output:
+Index of first occurance of word 'important':  9
+*/
+
+//What if I want to find the index of last occurance of a repeating word?
+
+console.log("Index of last occurance of word 'important': ",str2.lastIndexOf("important"))
+
+/*
+Output:
+Index of last occurance of word 'important':  75
+*/
+
+//What if I want to find the index of 2nd occurance?
+
+let indexOfFirstOccurance =  str2.indexOf("important")
+let indexOfSecondOccurance = str2.indexOf("important", (indexOfFirstOccurance+1))
+
+console.log("Index of second occurance of word 'important': ",indexOfSecondOccurance)
+
+/*
+Output:
+Index of second occurance of word 'important':  50
+*/
+String replace
+replace() method is used to replace a substring in a string with a new string.
+
+let str = 'Learning JS is easy, I like JS programming!';
+let newStr = str.replace('JS','JavaScript');
+
+// Replacing the first occurrence of the substring JS in given string
+
+console.log(newStr);
+
+/*
+Output:
+Learning JavaScript is easy, I like JS programming!
+*/
+
+// Using regular expression all occurences of a substring in a string can be replaced.
+// global flag 'g' is used to replace all occurences of JS in a given string
+
+let str = 'Learning JS is easy, I like JS programming!';
+let newStr = str.replace(/JS/g,'JavaScript');
+
+console.log(newStr);
+
+/*
+Output:
+Learning JavaScript is easy, I like JavaScript programming!
+*/
+
+// To ignore cases for search and replacement, ignore flag 'i' can be used.
+
+let str = 'Learning JS is easy, I like js programming!';
+let newStr = str.replace(/JS/gi,'JavaScript');
+
+console.log(newStr);
+
+/*
+Output:
+Learning JavaScript is easy, I like JavaScript programming!
+*/
+
+// Instead of passing newSubString as a second argument to the replace(), we can pass replacement function
+
+// Syntax is as follows :
+
+let newStr = str.replace(substr | regexp, replacer);
+
+// Using this syntax, the replace() method invokes the replacer function after the match has been performed.
+
+let str = "I want to learn nodejs and npm";
+let regx = /nodejs|npm/gi;
+
+// here replace() function change the substrings nodejs and npm to uppercase.
+// a replacer function is passed into the replace() function:
+
+let newStr = str.replace(regx, (match) => {
+    console.log({match});
+    return match.toUpperCase();
+});
+
+// match: is the matched substring.
+
+console.log(newStr);
+
+/*
+Output:
+{match: "nodejs"}
+{match: "npm"}
+I want to learn NODEJS and NPM
+*/
+
+/*
+Note:
+Use a regular expression with the global flag (g) to replace all occurrences of a substring with a new one.
+*/
+String search
+The search() method searches for a specified value in a given string and returns the position of the match.
+
+let str = "Learning JavaScript is fun!";
+str.search("JavaScript")
+
+/*
+Output : 9
+*/
+
+// Using Regular Expression
+let regex = /[0-9]/;
+let str = 'A crowd of 300 was expected, but only 105 showed up.';
+let index = str.search(regex);
+
+// search() returns -1, if match is not found.
+
+console.log(index);
+
+/*
+Output : 11
+*/
+
+/*
+Note:
+JavaScript String search() is used to find the index of the first match based on a regular expression
+in a string.
+*/
+String match
+The match() method searches for a match in a given string using a regular expression and returns the matches as an Array object.
+
+let str1 = "Year: 1999–2007";
+let str2 = str1.match(/d+/g);
+console.log(str2);
+
+/*
+Output:
+["1999", "2007"]
+*/
+
+/*
+Note:
+JavaScript String match() method matches a string against a regular expression.
+*/
+String split
+The split() method divides a string into an array of substrings, and returns the new array.
+
+let str = 'Learning string functions!';
+
+// splitting the string into words
+
+let res = str.split(' ');
+
+console.log(res);
+
+/*
+Output :
+["Learning", "string", "functions!"]
+*/
+
+// Returning specific number of substrings
+
+let str = 'Learning string functions!';
+let res = str.split(' ',2);
+
+console.log(res);
+
+/*
+Output :
+["Learning", "string"]
+*/
+
+// Splitting a string using Regular Expression
+
+let str = 'But that was now in the past; 1999 was another year! Sale increased drastically.';
+let res = str.split(/[;,!,.]/);
+console.log(res);
+
+/*
+Output:
+["But that was now in the past","1999 was another year","Sale increased drastically",""]
+*/
+
+/*
+Note:
+JavaScript String split() splits a string into an array of substrings by a separator.
+Second parameter (limit) can be used to return a limited number of splits.
+*/
+Assignment
+Create a program to join two or more strings.
+Create a program to find out string contains any specific sub string and at what position.
+Create a program to compare two strings (to find out if they are similar or not).
+let str1=” I like JavaScript programming “. Remove the spaces at the start and the end of string str1.
+let str1=”JS+js=2Js”. Convert all alphabets in str1 to uppercase and then to lowercase. 
+let str1=”http://ghthsbn/forms/requests/sql/requester=/?cacheid=a5300fgh”. Find out cacheid from string str1.
+Create a program to find out length of string and if length is odd number then append extra character ‘d’ at the end of string.
+let str1=”JS learning is fun”. Find out if str1 contains substring “learning” and if yes then fetch later part of string after “learning” into new string str2.
+let str1=”Learning JS is fun”. Replace the substring “fun” in str1 with another string “huge fun”.
+let str=”ASSEDFTTYUJKKIUHHSFFSSTYSS”. Find out how many times substring SS is repeated in str.
+let str=”A crowd of 300 were expected.” Replace a number 300 by a word ‘three hundred’ in a given string. 
+let str=”ASWAP34ASD678UJK99FGT54HUI”. Separate the alphabets and numbers from str into two different strings.

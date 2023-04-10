@@ -1,0 +1,35 @@
+***** Material and Assignments Link *****
+Assignment
+Write a program to to find prime numbers in between 1 and 20.
+Write a program to print table of 2.
+Write a program to print all odd number between 1 to 50.
+Write a program to find sum of first 10 natural numbers.
+Write a program to find sum of first 10 odd numbers.
+Write a program to calculate factorial of a given number.
+Write a program to display square of first 10 numbers.
+Write a program to find perfect numbers between 1 to 15.
+Write a program to find armstrong numbers from 1 to 500.
+Write a program to display following output :       
+                *
+                **
+                ***
+                ****
+                *****
+
+https://www.dezlearn.com/course-material-and-assignments/javascript-nodejs/looping-in-javascript/
+
+
+
+Assignment
+Create a program to join two or more strings.
+Create a program to find out string contains any specific sub string and at what position.
+Create a program to compare two strings (to find out if they are similar or not).
+let str1=” I like JavaScript programming “. Remove the spaces at the start and the end of string str1.
+let str1=”JS+js=2Js”. Convert all alphabets in str1 to uppercase and then to lowercase. 
+let str1=”http://ghthsbn/forms/requests/sql/requester=/?cacheid=a5300fgh”. Find out cacheid from string str1.
+Create a program to find out length of string and if length is odd number then append extra character ‘d’ at the end of string.
+let str1=”JS learning is fun”. Find out if str1 contains substring “learning” and if yes then fetch later part of string after “learning” into new string str2.
+let str1=”Learning JS is fun”. Replace the substring “fun” in str1 with another string “huge fun”.
+let str=”ASSEDFTTYUJKKIUHHSFFSSTYSS”. Find out how many times substring SS is repeated in str.
+let str=”A crowd of 300 were expected.” Replace a number 300 by a word ‘three hundred’ in a given string. 
+let str=”ASWAP34ASD678UJK99FGT54HUI”. Separate the alphabets and numbers from str into two different strings.

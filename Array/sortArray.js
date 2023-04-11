@@ -1,4 +1,4 @@
-let arr = [5,6,1,3,7,9,0];
+let arr = [5,6,1,3,7,9,0,7,3,0,3];
 for(let i = 0 ; i<arr.length ; i++){
     for(let j = 0 ; j<arr.length ; j++){
         if(arr[j] > arr[j+1]){

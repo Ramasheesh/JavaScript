@@ -1,48 +1,35 @@
-let original = [1241,212,123621]
-for(let i = 0 ; i<original.length/2;i++){
-  if(original[i] == original[original.length-1-i]){
-    console.log("ture",original[i]);
-  }
-    else{
-      console.log("false");
+// const data = [121,22522,464,2524,36531]
+// const data1 = [] 
+// for(let i = 0; i<(data.length)/2 ;i++){
+//     if(data[i] !== data[data.length-1-i]){
+//         // console.log(data);
+//         data1[data1.length] = data[data.length-1-i]
+//     } 
+// }
+// console.log(data1)
+
+function isPalindrome(str) {
+    // loop through the string from both ends
+    for(let i = 0, j = str.length - 1; i < j; i++, j--) {
+      // if the characters at both ends don't match, return false
+      if(str.charAt(i) !== str.charAt(j)) {
+        return false;
+      }
     }
-}
-
-
-// // let original2 = [121,323,1254]
-// function palindromNum(check){
-//   let reverse = 0
-//   let  original2 = [121,323,1254]
-//   while(original2 > 0){
-//     let rem = rem % 10;
-//       reverse = reverse * 10 + rem;
-//       original2 = original2/10;
-//   }
-//   if(original2 == reverse){
-//     console.log(original2[i])
-//   }else{
-//     return
-//   }
-// }
-// for(let i  = 0 ; i < original2.length; i++){
- 
-//   check(original2[i])
-// }
-
-
-
-
-
-
-
-
-
-// function pln(str){
-//   let reverseStr = ''
-//   for(let i = str.length-1 ;i>=0 ; i--){
-//     reverseStr += str[i] 
-//   }
-//   return str === reverseStr;
-// }
-// console.log(pln("dad"));
-
+    
+    // if the loop completes without returning false, the string is a palindrome
+    return true;
+  }
+  function isPalindrome(str) {
+    let reversedStr = '';
+    
+    // loop through the string backwards and add each character to the reversed string
+    for(let i = str.length - 1; i >= 0; i--) {
+      reversedStr += str[i];
+    }
+    
+    // compare the original string with the reversed string
+    return str === reversedStr;
+  }
+  console.log(isPalindrome("racecar")); // true
+  console.log(isPalindrome("hello")); // false

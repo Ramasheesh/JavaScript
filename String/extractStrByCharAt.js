@@ -13,7 +13,7 @@ console.log("2-"+st2[1])
 console.log("2-"+st2[st2.length-1])
 
 for(let i = 0 ; i <= st2.length-1;i++){
-    // console.log("3:-> "+st2[i])
+    console.log("3:-> "+st2[i])
 }
 
 

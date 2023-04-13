@@ -1,4 +1,4 @@
-let original = [1241,212,12321]
+let original = [212,12321]
 for(let i = 0 ; i<original.length/2;i++){
   if(original[i] == original[original.length-1-i]){
     console.log("ture",original[i]);

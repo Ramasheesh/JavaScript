@@ -2,7 +2,7 @@ let x = [0,1,2,3,5,8,9]
 function newArray(x, start, end){
     var temp = x[start]
     x[start] = x[end]
-    x[end] = temp
+    x[end] = temp;
     if(start+1<end-1){
         newArray(x,start+1,end-1);
     }

@@ -4,7 +4,7 @@ let ele = 35
 
 for(let i = 0; i<=data.length-1;i++){
    
-   console.log(i)
+    // console.log(i)
     if(data[i] === ele){
 
     // console.log("hello");
